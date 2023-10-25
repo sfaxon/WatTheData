@@ -5,14 +5,15 @@
 //  Created by Seth Faxon on 10/25/23.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct WatTheDataApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Post.self,
+            Author.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
