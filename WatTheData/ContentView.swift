@@ -24,7 +24,6 @@ struct ContentView: View {
             }
         }
         .task {
-//            await postService.refresh(modelContext: modelContext)
             Task.detached {
                 let postService = PostService(modelContainer: modelContext.container)
                 await postService.refreshSavingAuthorsFirst()

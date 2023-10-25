@@ -34,6 +34,14 @@ struct PostResource: Codable {
              "id":2,
              "name":"Author B"
           }
+       },
+       {
+          "id":4,
+          "title":"Post 4",
+          "author":{
+             "id":2,
+             "name":"Author B"
+          }
        }
     ]
     """

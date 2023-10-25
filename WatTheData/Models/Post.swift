@@ -15,10 +15,11 @@ final class Post {
 
     let title: String
 
+    // I could not figure out a way to make this work without having Author be optional.
     @Relationship(deleteRule: .nullify)
     var author: Author?
 
-    init(remoteId: Int, title: String, author: Author? = nil) {
+    init(remoteId: Int, title: String, author: Author) {
         self.remoteId = remoteId
         self.title = title
         self.author = author
