@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Mock server data
 struct PostResource: Codable {
     static let dataString: String = """
     [

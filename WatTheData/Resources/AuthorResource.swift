@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Mock server data
 struct AuthorResource: Codable {
     let id: Int
     let name: String

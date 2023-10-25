@@ -19,12 +19,13 @@ struct ContentView: View {
                 HStack {
                     Text(post.title)
                     Spacer()
-                    // Text(post.author.name) // uncomment this and the app crashes
+                    // Text(post.author.name) // DANGER uncomment this and the app crashes
                 }
             }
         }
         .task {
-            await postService.refresh(modelContext: modelContext)
+//            await postService.refresh(modelContext: modelContext)
+            await postService.refreshSavingAuthorsFirst(modelContext: modelContext)
         }
     }
 }

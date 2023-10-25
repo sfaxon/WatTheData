@@ -21,7 +21,7 @@ final class Author {
     init(remoteId: Int, name: String) {
         self.remoteId = remoteId
         self.name = name
-        posts = [] // WAT
+        posts = [] // DANGER
     }
 
     convenience init(from authorResource: AuthorResource) {

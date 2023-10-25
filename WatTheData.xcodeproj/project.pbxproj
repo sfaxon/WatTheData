@@ -55,6 +55,7 @@
 		C33B2D4F2AE9AF0400DF53A9 /* AuthorResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorResource.swift; sourceTree = "<group>"; };
 		C33B2D532AE9AF8000DF53A9 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		C33B2D562AE9B4BF00DF53A9 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		C33B2D582AE9B9AE00DF53A9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		C33B2D132AE9AE4000DF53A9 = {
 			isa = PBXGroup;
 			children = (
+				C33B2D582AE9B9AE00DF53A9 /* README.md */,
 				C33B2D1E2AE9AE4000DF53A9 /* WatTheData */,
 				C33B2D322AE9AE4100DF53A9 /* WatTheDataTests */,
 				C33B2D3C2AE9AE4100DF53A9 /* WatTheDataUITests */,
