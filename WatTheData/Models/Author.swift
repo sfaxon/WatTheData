@@ -16,12 +16,11 @@ final class Author {
     let name: String
 
     @Relationship(deleteRule: .cascade, inverse: \Post.author)
-    var posts: [Post]
+    var posts: [Post]?
 
     init(remoteId: Int, name: String) {
         self.remoteId = remoteId
         self.name = name
-        posts = [] // DANGER
     }
 
     convenience init(from authorResource: AuthorResource) {

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @StateObject private var postService = PostService()
+
     @Query private var posts: [Post]
 
     var body: some View {
@@ -19,13 +19,16 @@ struct ContentView: View {
                 HStack {
                     Text(post.title)
                     Spacer()
-                    // Text(post.author.name) // DANGER uncomment this and the app crashes
+                    Text(post.author?.name ?? "-") // DANGER uncomment this and the app crashes
                 }
             }
         }
         .task {
 //            await postService.refresh(modelContext: modelContext)
-            await postService.refreshSavingAuthorsFirst(modelContext: modelContext)
+            Task.detached {
+                let postService = PostService(modelContainer: modelContext.container)
+                await postService.refreshSavingAuthorsFirst()
+            }
         }
     }
 }

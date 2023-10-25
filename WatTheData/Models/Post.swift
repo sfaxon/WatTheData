@@ -14,9 +14,11 @@ final class Post {
     let remoteId: Int // don't use id, because it belongs to SwiftData?
 
     let title: String
-    let author: Author
 
-    init(remoteId: Int, title: String, author: Author) {
+    @Relationship(deleteRule: .nullify)
+    var author: Author?
+
+    init(remoteId: Int, title: String, author: Author? = nil) {
         self.remoteId = remoteId
         self.title = title
         self.author = author
